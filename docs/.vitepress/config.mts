@@ -3,6 +3,7 @@ import { path, listMenu } from "./var";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/',
   title: "Immanuel Bintang Docs",
   description: "Documentation",
   themeConfig: {
