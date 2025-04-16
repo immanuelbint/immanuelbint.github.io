@@ -7,6 +7,9 @@ export default defineConfig({
   title: "Immanuel Bintang Docs",
   description: "Documentation",
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
