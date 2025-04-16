@@ -23,7 +23,7 @@ sudo modprobe nbd max_part=8
 Ensure `qemu-nbd` is installed:
 ```bash
 sudo apt install qemu-utils  # For Debian/Ubuntu
-sudo yum install qemu-nbd    # For RHEL/CentOS/Rocky
+sudo yum install qemu-img    # For RHEL/CentOS/Rocky
 ```
 
 ### Step 2 - Connect the QCOW2 Image to an NBD Device

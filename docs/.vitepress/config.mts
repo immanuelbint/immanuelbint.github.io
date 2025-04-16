@@ -100,6 +100,34 @@ export default defineConfig({
       ],
     },
   ],
+  storage: [
+    {
+    text: 'Storage',
+    items: [
+      { 
+        text: 'Basic', 
+        collapsed: true,
+        items: [
+          listMenu("resize lvm disk",`${path.storage}/resize-lvm`),
+        ],
+      },
+    ],
+  },
+  ],
+  containerization: [
+    {
+    text: 'Containerization',
+    items: [
+      { 
+        text: 'Docker', 
+        collapsed: true,
+        items: [
+          listMenu("Deploy Odoo docker with CI/CD",`${path.docker}/odoo-docker-ci`),
+        ],
+      },
+    ],
+  },
+  ],
   }
   }
 })

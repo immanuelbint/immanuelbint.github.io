@@ -9,7 +9,7 @@ const menu = {
     iac: '/iac',
     shell_script: '/shell_script',
     containerization: '/containerization',
-    sysadmin: '/sysadmin'
+    storage: '/storage'
 }
   
 export const path = {
@@ -26,6 +26,13 @@ export const path = {
     basic: `${menu.shell_script}/basic`,
     advanced: `${menu.shell_script}/advanced`,
     debugging: `${menu.shell_script}/debugging`,
+
+    // Storage Backup
+    storage: `${menu.storage}`,
+
+    // Containerization
+    docker: `${menu.containerization}/docker`,
+    kubernetes: `${menu.containerization}/kubernetes`,
 
     //Getting Started
     started: `/getting-started`,

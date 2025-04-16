@@ -15,7 +15,7 @@ LUKS (Linux Unified Key Setup) encryption secures QCOW2 images used in virtualiz
 First, create a new, empty QCOW2 image with LUKS encryption. You’ll need to specify a password and size. Ensure `qemu-utils` is installed:
 ```bash
 sudo apt install qemu-utils  # For Debian/Ubuntu
-sudo yum install qemu-img qemu-nbd  # For RHEL/CentOS/Rocky
+sudo yum install qemu-img  # For RHEL/CentOS/Rocky
 ```
 
 Run the following command, replacing `password-bebas` with your chosen password and `ukuran-bebas` with your desired size:
