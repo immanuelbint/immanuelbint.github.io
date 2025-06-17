@@ -8,6 +8,7 @@ const menu = {
     how_to: '/how_to',
     iac: '/iac',
     shell_script: '/shell_script',
+    linux_admin: '/linux_admin',
     containerization: '/containerization',
     storage: '/storage'
 }
@@ -26,6 +27,9 @@ export const path = {
     basic: `${menu.shell_script}/basic`,
     advanced: `${menu.shell_script}/advanced`,
     debugging: `${menu.shell_script}/debugging`,
+
+    // Linux Admin
+    upgrade: `${menu.linux_admin}/upgrade`,
 
     // Storage Backup
     storage: `${menu.storage}`,

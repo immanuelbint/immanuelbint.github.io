@@ -76,6 +76,20 @@ export default defineConfig({
         ],
       },
     ],
+      linux_admin: [
+        {
+        text: 'Linux Admin',
+        items: [
+          { 
+            text: 'Upgrade', 
+            collapsed: true,
+            items: [
+              listMenu("leap-upgrade",`${path.upgrade}/leap-upgrade`),
+            ],
+          },
+        ],
+      },
+    ],
     iac: [
       {
       text: 'OpenTofu',
