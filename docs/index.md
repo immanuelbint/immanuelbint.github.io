@@ -19,6 +19,4 @@ features:
     link: /containerization/
   - title: Sysadmin
     details: A comprehensive collection of documentation on shell scripting, networking, monitoring, logging, and storage backup for effective system administration.
-
-footer: "🛠️ This site is under active development and updated regularly as part of my homelab learning journey."
 ---
