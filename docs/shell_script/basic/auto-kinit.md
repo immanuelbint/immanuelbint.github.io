@@ -30,7 +30,7 @@ if [[ -n "${KEYTABS[$response]}" ]]; then
 else
     echo "Service not found / keytab didn't exist."
     read -r -p "Do you still wanna to kinit with custom keytab? (y/n) => " userinput
-    
+
     ## if else condition to custom keytabs
     if [[ "$userinput" =~ ^[Yy]$ ]]; then
         read -r -p "Enter full path to keytab => " keytab_path
@@ -41,7 +41,7 @@ fi
 
 ## check if the path is exist
 if [[ -f "$keytab_path" ]]; then
-    principal=$(klist -kt "$keytab_path" | grep @ | awk '{print $7}' | head -1)
+    principal=$(klist -kt "$keytab_path" | grep @ | cut -d' ' -f 7 | head -1)
     if [[ -n "$principal" ]]; then
         kinit -kt "$keytab_path" "$principal"
         echo "Successfully kinit with keytab : $keytab_path"
