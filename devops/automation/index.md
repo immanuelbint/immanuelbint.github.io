@@ -24,7 +24,7 @@ description: Collection of Bash scripts for automating DevOps and System tasks.
 
 ## 🐳 Docker Scripts
 
-- [📊 Docker Resource Limiter](../../containers/docker/resource-limiter.md)  
+- [📊 Docker Resource Limiter](../../devops/containers/docker/docker-limit.md)  
   Interactive menu script to limit CPU and memory for Docker containers.
 
 ---
@@ -41,7 +41,4 @@ description: Collection of Bash scripts for automating DevOps and System tasks.
 ## 📎 Related Topics
 
 - [DevOps Tools](../../index.md)
-- [Containers Overview](../../containers/docker/index.md)
-- [Platform Security](../../../platform/security/index.md)
-
 ---
