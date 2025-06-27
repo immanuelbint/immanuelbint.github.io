@@ -48,7 +48,6 @@ PKGS_EL8=(epel-release yum-utils python2 python2-devel python2-pip chrony curl w
 ## Detect OS 
 function detect_os_version() {
 OS_VER=$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"')
-MAJOR=$(awk -F= '/^VERSION_ID=/{print $2}' /etc/os-release | cut -d. -f1 | tr -d '"')
 
 case "$OS_VER" in
   rhel|centos|rocky|almalinux) ;;
@@ -64,8 +63,9 @@ function check_pkg_manager() {
 
 ## Enable Powertools repository and set default python env for el8
 function enable_powertools() {
+    command -v yum-config-manager &>/dev/null || $PKG_MGR install -y yum-utils
     yum config-manager --enable epel
-    yum config-manager --set-enabled powertools
+    yum-config-manager --set-enabled powertools || yum-config-manager --set-enabled PowerTools
     command -v python2 &> /dev/null || fatal "Python2 not installed"
     alternatives --set python /usr/bin/python2
 }
@@ -106,7 +106,7 @@ function open_ports() {
     ## Add your own ports here
     local ports=(8080 8440 50070 8020 50075 50010 50020 50090 50030 8021 51111 50060 10000 9083)
     systemctl enable --now firewalld chronyd
-    for port in "${ports[@]}"; do firewall-cmd --permanent --add-port=${port}/tcp; done
+    for port in "${ports[@]}"; do firewall-cmd --permanent --add-port="${port}"/tcp; done
     firewall-cmd --reload
 }
 
@@ -179,6 +179,7 @@ function main() {
 }
 
 main "${1:-}"
+
 ```
 
 ---
