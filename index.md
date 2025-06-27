@@ -40,7 +40,7 @@ Practical automation & infra as code:
 
 ### 📚 References
 Quick-access technical command notes:
-- [CLI Tools](/references/cli-tools/)
+- [CLI Tools](/references/)
 
 ---
 
