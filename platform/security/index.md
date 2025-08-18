@@ -3,12 +3,12 @@ title: System Security
 description: Security hardening, firewall config, and access control.
 ---
 
-# 🔐 Security
+# Security
 
 Guides and scripts to secure Linux systems and production infrastructure.
 
-## 🔥 Firewall
+## Firewall
 
-- [📁 firewall/](./firewall/)
+- [firewall/](./firewall/)
 
-> ⚠️ Content under construction, SSH hardening, auditd, fail2ban to follow.
+> Content under construction, SSH hardening, auditd, fail2ban to follow.

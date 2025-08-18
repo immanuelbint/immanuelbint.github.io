@@ -3,21 +3,21 @@ title: Auto Kinit Script
 description: Automate Kerberos authentication using a dynamic keytab-based shell script.
 ---
 
-# 🔐 Automating `kinit` Using Shell Script
+# Automating `kinit` Using Shell Script
 
-## 🚨 Problem
+## Problem
 
-In Kerberized environments, authenticating as a specific Hadoop service user requires running `kinit` with the corresponding keytab. Doing this repeatedly for different services manually is time-consuming and error-prone, especially in large-scale systems.
+In Kerberized environments, authenticating as a specific Hadoop service user requires running `kinit` with the corresponding keytab. Doing this repeatedly for different services manually is time consuming and error prone, especially in large scale systems.
 
-## 💡 Goal
+## Goal
 
 To reduce repetition by automating the `kinit` process based on available service keytabs, while still allowing manual override when needed.
 
 ---
 
-## ⚙️ Solution – Bash Script for Flexible `kinit`
+## Solution – Bash Script for Flexible `kinit`
 
-### ✅ Features:
+## Features:
 - Auto-detect service name and keytab location from a predefined list.
 - Allow manual override for custom services.
 - Validate keytab file existence before attempting authentication.
@@ -25,14 +25,23 @@ To reduce repetition by automating the `kinit` process based on available servic
 
 ---
 
-### 🧪 Script Example
+## Script Example
 
 Create a file named `kinit.sh` and paste the following:
 
 ```bash
 #!/bin/bash
+## Setup logging
+function log() {
+  if [[ -n "${LOG:-}" ]]; then
+    printf '%s\n' "$*" | tee -a "$LOG" >&2
+  else
+    printf '%s\n' "$*" >&2
+  fi
+}
+function fatal() { log "ERROR: $*"; exit 1; }
 
-# Declare known keytabs in an associative array
+## Declare known keytabs in an associative array
 declare -A KEYTABS
 KEYTABS["hdfs"]="/etc/security/keytabs/hdfs.headless.keytab"
 KEYTABS["yarn"]="/etc/security/keytabs/yarn.service.keytab"
@@ -43,15 +52,15 @@ KEYTABS["kafka"]="/etc/security/keytabs/kafka.service.keytab"
 KEYTABS["solr"]="/etc/security/keytabs/solr.service.keytab"
 KEYTABS["spark"]="/etc/security/keytabs/spark.service.keytab"
 
-# Get service name input
+## Get service name input
 read -r -p "Enter service name you'd like to kinit => " response
 response=$(echo "$response" | tr '[:upper:]' '[:lower:]')
 
-# Check if service exists
+## Check if service exists
 if [[ -n "${KEYTABS[$response]}" ]]; then
     keytab_path="${KEYTABS[$response]}"
 else
-    echo "Service not found. Would you like to specify a custom keytab?"
+    log "Service not found. Would you like to specify a custom keytab?"
     read -r -p "(y/n) => " userinput
     if [[ "$userinput" =~ ^[Yy]$ ]]; then
         read -r -p "Enter full path to keytab => " keytab_path
@@ -60,23 +69,23 @@ else
     fi
 fi
 
-# Validate keytab and perform kinit
+## Validate keytab and perform kinit
 if [[ -f "$keytab_path" ]]; then
     principal=$(klist -kt "$keytab_path" | grep @ | awk '{print $NF}' | head -n 1)
     if [[ -n "$principal" ]]; then
         kinit -kt "$keytab_path" "$principal"
-        echo "✅ Successfully authenticated with keytab: $keytab_path"
+        log "INFO: Successfully authenticated with keytab: $keytab_path"
     else
-        echo "❌ Error: No principal found in keytab."
+        fatal "No principal found in keytab."
     fi
 else
-    echo "❌ Error: Keytab file not found at $keytab_path"
+    fatal "Keytab file not found at $keytab_path"
 fi
 ````
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. **Make the script executable:**
 
@@ -87,14 +96,14 @@ chmod +x kinit.sh
 2. **Run the script:**
 
 ```bash
-./kinit.sh
+bash kinit.sh
 ```
 
 ---
 
-## 🧭 Notes & Improvements
+## Notes and Improvements
 
-> 🔄 This script is part of an ongoing learning project and may not fully reflect best practices. Future improvements include:
+> This script is part of an ongoing learning project and may not fully reflect best practices. Future improvements include:
 >
 > * Adding support for JSON-based config files.
 > * Full automation using arguments (e.g. `--service=hdfs`).
@@ -105,7 +114,7 @@ chmod +x kinit.sh
 
 ---
 
-## 📎 Related Topics
+## Related Topics
 
 * [Kerberos Authentication Overview](https://web.mit.edu/kerberos/)
 * `kinit` command: `man kinit`

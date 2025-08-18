@@ -140,5 +140,5 @@ Rocky Linux release 8.10 (Green Obsidian)
 - **Post-Upgrade**: Run `sudo dnf update -y` to ensure all Rocky Linux packages are current.
 - **Backup**: Always have a full backup before upgrading, as the process is complex and risks data loss.
 
-## 📎 Related Scripts
-* 🚧 Content under construction
+## Related Scripts
+* Content under construction

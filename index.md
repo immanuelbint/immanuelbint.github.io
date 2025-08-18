@@ -4,26 +4,26 @@
 > Focused on DevOps, System Administration, Infrastructure, and CLI practices.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/immanuelbint/immanuelbint.github.io?style=flat-square)
-![Last updated](https://img.shields.io/badge/last_update-June_2025-blue?style=flat-square)
+![Last updated](https://img.shields.io/badge/last_update-Aug_2025-blue?style=flat-square)
 
 ---
 
-## 🧭 Overview
+## Overview
 
 This documentation is my way to:
 
-- 🧠 **Reconnect ideas** across projects and time
-- 📚 **Learn in public** and improve my technical writing
-- 🔍 Provide a practical **reference** for myself and others
-- 🌍 Build a portfolio aligned with my **goal to work abroad**
+- **Reconnect ideas** across projects and time
+- **Learn in public** and improve my technical writing
+- Provide a practical **reference** for myself and others
+- Build a portfolio aligned with my **goal to work abroad**
 
-> 💡 *Think of this like my second brain. Only cleaner and version-controlled.*
+> *Think of this like my second brain. Only cleaner and version-controlled.*
 
 ---
 
-## 🔧 Sections
+## Sections
 
-### 🖥️ Platform
+### Platform
 Systems, monitoring, and hardening:
 - [Linux Admin](/platform/linux-admin/)
 - [Networking](/platform/networking/)
@@ -32,25 +32,25 @@ Systems, monitoring, and hardening:
 - [Storage](/platform/storage/)
 - [Big Data](/platform/bigdata/)
 
-### ⚙️ DevOps
+### DevOps
 Practical automation & infra as code:
 - [Infrastructure as Code](/devops/iac/)
 - [Containers](/devops/containers/)
 - [Automation Scripts](/devops/automation/)
 
-### 📚 References
+### References
 Quick-access technical command notes:
 - [CLI Tools](/references/)
 
 ---
 
-## 📬 Contact
+## Contact
 
 Feel free to [reach out here](/contact/) for questions, collab, or feedback.
 
 ---
 
-## 🔭 Roadmap (Coming Soon)
+## Roadmap (Coming Soon)
 
 I'll continue expanding topics like:
 

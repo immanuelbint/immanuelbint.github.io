@@ -4,7 +4,7 @@ The `useradd` command creates a new user account in the system.
 
 ---
 
-## 🧱 Basic Usage
+## Basic Usage
 
 ```bash
 useradd <username>
@@ -12,7 +12,7 @@ useradd <username>
 
 >Creates a user without a password. You'll need to set it manually using passwd username.
 
-## 🔐 Create user with expiry date and password
+## Create user with expiry date and password
 
 Best practice is to avoid repeating steps (DRY principle). You can set the expiry and hashed password at once:
 
@@ -20,9 +20,9 @@ Best practice is to avoid repeating steps (DRY principle). You can set the expir
 useradd -e 2025-12-31 -p "$(openssl passwd -6 'yourpassword')" <username>
 ```
 
->⚠️ Security tip: Avoid exposing plaintext passwords in your shell history.
+>Security tip: Avoid exposing plaintext passwords in your shell history.
 
-## 🛡️ Secure way using stdin
+## Secure way using stdin
 
 Use standard input to safely handle password creation:
 ```bash

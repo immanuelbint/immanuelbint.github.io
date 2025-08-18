@@ -193,5 +193,5 @@ NAME                        MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
 - **Error Handling**: If `pvcreate` fails, ensure the disk is not partitioned (`fdisk` to remove partitions if needed).
 
 
-## 📎 Related Scripts
-* 🚧 Content under construction
+## Related Scripts
+* Content under construction

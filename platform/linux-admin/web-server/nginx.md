@@ -425,5 +425,5 @@ Now, access your server at `https://<hostname>:443` (replace `<hostname>` with y
 ![Nginx default page with HTTPS](./images/httpsnginx.png)
 
 
-## 📎 Related Scripts
-* 🚧 Content under construction
+## Related Scripts
+* Content under construction

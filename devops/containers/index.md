@@ -3,18 +3,18 @@ title: Containers Overview
 description: Introduction to container-related technologies including Docker and Kubernetes.
 ---
 
-# 📦 Containers
+# Containers
 
 Explore tools and scripts related to containerization technologies such as Docker and Kubernetes.
 
-## 🐳 Docker
+## Docker
 
-- [⚙️ Resource Limiting](./docker/docker-limit.md)  
+- [Resource Limiting](./docker/docker-limit.md)  
   Apply CPU & memory limits to containers using Bash scripts.
 
-## ☸️ Kubernetes
+## Kubernetes
 
-- [📘 Overview](./kubernetes/index.md)  
+- [Overview](./kubernetes/index.md)  
   Placeholder for Kubernetes best practices and automation.
 
-> 🚧 More examples coming soon!
+> More examples coming soon!

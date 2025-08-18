@@ -3,21 +3,21 @@ title: Automate Ambari Server Requirement Setup
 description: Automate Ambari setup with bash to simplify and speed up deployment.
 ---
 
-# ⚙️ Automating Ambari Server Requirement Setup
+# Automating Ambari Server Requirement Setup
 
-## 🚨 Problem
+## Problem
 
 Manual setup of Ambari dependencies is repetitive, error-prone, and time-consuming.
 
-## 💡 Goal
+## Goal
 
 Automate the entire requirement setup using a shell script, ensuring consistency and speed.
 
-## ⚙️ Solution – Bash Script for requirement setup
+## Solution – Bash Script for requirement setup
 
 Automate the entire requirement setup using a shell script, ensuring consistency and speed.
 
-### ✅ Features:
+### Features:
 - Detects OS version (RHEL/CentOS/Rocky 7 or 8).
 - Installs all required packages and Java dependencies.
 - Enables firewalld and opens essential ports.
@@ -27,7 +27,7 @@ Automate the entire requirement setup using a shell script, ensuring consistency
 
 ---
 
-### 🧪 Script Example
+## Script Example
 
 Create a file named `requirement.sh` and paste the following:
 
@@ -80,7 +80,7 @@ function need_pkgs() {
     if ((${#missing[@]})); then
         "$PKG_MGR" -y install "${missing[@]}"
     else
-        log "All requested packages already present."
+        log "INFO: All requested packages already present."
     fi
 }
 
@@ -91,7 +91,7 @@ function setup_java() {
     grep -q "JAVA_HOME" ~/.bash_profile 2>/dev/null || {
       echo "export JAVA_HOME=${javahome}" >> ~/.bash_profile
       echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
-      log "JAVA_HOME set to ${javahome}"
+      log "INFO: JAVA_HOME set to ${javahome}"
   }
 }
 
@@ -110,7 +110,7 @@ function open_ports() {
     firewall-cmd --reload
 }
 
-## ⚠️ **Warning**: Disabling SELinux is not recommended for production systems. Update this step later to use proper SELinux policies.
+## **Warning**: Disabling SELinux is not recommended for production systems. Update this step later to use proper SELinux policies.
 function disabling_selinux() {
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' ${SELINUX_CONF}
 }
@@ -139,7 +139,7 @@ function setup_ambari_server() {
 ## Main Program
 function main() {
     local target=$1
-    log "Starting the script ..."
+    log "INFO: Starting the script ..."
     [[ $target =~ ^(7|8)$ ]] || fatal "usage: $0 <7|8>"
     [[ $(id -u) -eq 0 ]] || fatal "Run as root"
 
@@ -147,24 +147,24 @@ function main() {
     check_pkg_manager
 
     if [[ ${target} == "8" ]]; then
-        log "Installing required packages for Ambari Server"
+        log "INFO: Installing required packages for Ambari Server"
         need_pkgs "${PKGS_EL8[@]}"
         enable_powertools
     else
-        log "Installing required packages for Ambari Server"
+        log "INFO: Installing required packages for Ambari Server"
         need_pkgs "${PKGS_EL7[@]}"
     fi
 
-    log "Setup ssh-key ..."
+    log "INFO: Setup ssh-key ..."
     gen_ssh_key
 
-    log "Installing and setup JAVA ..."
+    log "INFO: Installing and setup JAVA ..."
     setup_java
 
-    log "Adding required ports to firewall ..."
+    log "INFO: Adding required ports to firewall ..."
     open_ports
 
-    log "Disable SElinux"
+    log "INFO: Disable SElinux"
     disabling_selinux
 
     read -rp "Repo host? " host
@@ -172,10 +172,10 @@ function main() {
     ambari_version="${user_input:-2.7.5}"
     add_ambari_repo "$target" "$host" "$ambari_version"
 
-    log "Installing ambari-server ..."
+    log "INFO: Installing ambari-server ..."
     setup_ambari_server
 
-    log "All done ✔"
+    log "INFO: All done ✔"
 }
 
 main "${1:-}"
@@ -184,7 +184,7 @@ main "${1:-}"
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. **Make the script executable:**
 
@@ -200,9 +200,9 @@ chmod +x requirement.sh
 
 ---
 
-## 🧭 Notes & Improvements
+## Notes & Improvements
 
-> 🔄 This script is part of an ongoing learning project and may not fully reflect best practices. Future improvements include:
+> This script is part of an ongoing learning project and may not fully reflect best practices. Future improvements include:
 >
 > * Improved error handling and logging.
 > * Improved the SELinux handling without disable it.
@@ -211,7 +211,7 @@ chmod +x requirement.sh
 
 ---
 
-## 📎 Related Topics
+## Related Topics
 
 * [ODP Overview](https://www.opensourcedataplatform.com/)
 ---

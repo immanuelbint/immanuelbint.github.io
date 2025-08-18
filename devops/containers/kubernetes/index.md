@@ -3,8 +3,8 @@ title: Kubernetes Overview
 description: Introduction to Kubernetes automation and configuration tips.
 ---
 
-# ☸️ Kubernetes
+# Kubernetes
 
 Kubernetes scripts and configurations for managing clusters more efficiently.
 
-> 🚧 Currently under construction
+> Currently under construction
