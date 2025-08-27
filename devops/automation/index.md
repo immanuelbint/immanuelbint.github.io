@@ -23,6 +23,9 @@ description: Collection of Bash scripts for automating DevOps and System tasks.
 - [Python Install Automation](../automation/bash/get-python.md)  
   A script to simplify the python installation process.
 
+- [Pipeline Scanner](../automation/bash/pipeline-scanner.md)  
+  A lightweight script to scan credentials and prevent leaks.
+
 ---
 
 ## Docker Scripts

@@ -12,5 +12,6 @@ Cheatsheets and examples for commonly used Linux CLI tools.
 - [cut](./cli-tools/cut.md)
 - [useradd](./cli-tools/useradd.md)
 - [xargs](./cli-tools/xargs.md)
+- [awk](./cli-tools/awk.md)
 
 > More tools will be added as the library grows.
