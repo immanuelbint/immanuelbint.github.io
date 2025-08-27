@@ -17,7 +17,7 @@ Automate the entire requirement setup using a shell script, ensuring consistency
 
 Automate the entire requirement setup using a shell script, ensuring consistency and speed.
 
-### Features:
+## Features:
 - Detects OS version (RHEL/CentOS/Rocky 7 or 8).
 - Installs all required packages and Java dependencies.
 - Enables firewalld and opens essential ports.
