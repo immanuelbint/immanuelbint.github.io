@@ -33,7 +33,7 @@ To reduce repetition by automating the `get-python` process, while still allowin
 
 ## Script Example
 
-Create a file named `useradd.sh` and paste the following:
+Create a file named `get-python.sh` and paste the following:
 
 ```bash
 #!/bin/bash
@@ -193,9 +193,9 @@ main
 
 ```bash
 bash get-python.sh --version <python_version>
-````
+```
 
-### Example:
+## Example:
 
 ```bash
 bash get-python.sh --version 3.11.0
