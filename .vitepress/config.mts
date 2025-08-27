@@ -46,6 +46,8 @@ export default defineConfig({
               { text: 'Auto Kinit', link: '/devops/automation/bash/auto-kinit' },
               { text: 'Create User', link: '/devops/automation/bash/create-user' },
               { text: 'Setup Requirement Ambari', link: '/devops/automation/bash/setup-requirement-ambari' },
+              { text: 'Get Python', link: '/devops/automation/bash/get-python' },
+              { text: 'Pipeline Scanner', link: '/devops/automation/bash/pipeline-scanner' },
             ]
           },
           {
@@ -125,6 +127,7 @@ export default defineConfig({
               { text: 'cut', link: '/references/cli-tools/cut' },
               { text: 'useradd', link: '/references/cli-tools/useradd' },
               { text: 'xargs', link: '/references/cli-tools/xargs' },
+              { text: 'awk', link: '/references/cli-tools/awk' },
             ]
           }
         ]
