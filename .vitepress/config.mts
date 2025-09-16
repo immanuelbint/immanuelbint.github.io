@@ -128,6 +128,8 @@ export default defineConfig({
               { text: 'useradd', link: '/references/cli-tools/useradd' },
               { text: 'xargs', link: '/references/cli-tools/xargs' },
               { text: 'awk', link: '/references/cli-tools/awk' },
+              { text: 'aws-cli', link: '/references/cli-tools/aws-cli' },
+              { text: 'find', link: '/references/cli-tools/find' },
             ]
           }
         ]

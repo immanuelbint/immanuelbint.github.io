@@ -4,7 +4,7 @@
 > Focused on DevOps, System Administration, Infrastructure, and CLI practices.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/immanuelbint/immanuelbint.github.io?style=flat-square)
-![Last updated](https://img.shields.io/badge/last_update-Aug_2025-blue?style=flat-square)
+![Last updated](https://img.shields.io/badge/last_update-Sep_2025-blue?style=flat-square)
 
 ---
 
