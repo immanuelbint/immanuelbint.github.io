@@ -54,7 +54,7 @@ export default defineConfig({
             text: 'Containers',
             collapsed: true,
             items: [
-              { text: 'Overview', link: '/devops/containers/' },
+              { text: 'Containers Overview', link: '/devops/containers/' },
               { text: 'Docker', link: '/devops/containers/docker/' },
               { text: 'Docker Limit', link: '/devops/containers/docker/docker-limit' },
               { text: 'Kubernetes', link: '/devops/containers/kubernetes/' },
@@ -64,9 +64,9 @@ export default defineConfig({
             text: 'IaC',
             collapsed: true,
             items: [
-              { text: 'Overview', link: '/devops/iac/' },
-              { text: 'Overview', link: '/devops/iac/ansible/' },
-              { text: 'Overview', link: '/devops/iac/opentofu/' },
+              { text: 'IaC Overview', link: '/devops/iac/' },
+              { text: 'Ansible', link: '/devops/iac/ansible/' },
+              { text: 'OpenTofu', link: '/devops/iac/opentofu/' },
             ]
           },
         ]
@@ -136,6 +136,7 @@ export default defineConfig({
               { text: 'aws-cli', link: '/references/cli-tools/aws-cli' },
               { text: 'cut', link: '/references/cli-tools/cut' },
               { text: 'find', link: '/references/cli-tools/find' },
+              { text: 'firewall-cmd', link: '/references/cli-tools/firewall-cmd' },
               { text: 'useradd', link: '/references/cli-tools/useradd' },
               { text: 'xargs', link: '/references/cli-tools/xargs' },
             ]
