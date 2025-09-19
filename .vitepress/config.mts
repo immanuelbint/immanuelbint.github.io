@@ -60,7 +60,15 @@ export default defineConfig({
               { text: 'Kubernetes', link: '/devops/containers/kubernetes/' },
             ]
           },
-          { text: 'IaC', link: '/devops/iac/' },
+          { 
+            text: 'IaC',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/devops/iac/' },
+              { text: 'Overview', link: '/devops/iac/ansible/' },
+              { text: 'Overview', link: '/devops/iac/opentofu/' },
+            ]
+          },
         ]
       },
       {
@@ -124,12 +132,12 @@ export default defineConfig({
           {
             text: 'CLI Tools',
             items: [
-              { text: 'cut', link: '/references/cli-tools/cut' },
-              { text: 'useradd', link: '/references/cli-tools/useradd' },
-              { text: 'xargs', link: '/references/cli-tools/xargs' },
               { text: 'awk', link: '/references/cli-tools/awk' },
               { text: 'aws-cli', link: '/references/cli-tools/aws-cli' },
+              { text: 'cut', link: '/references/cli-tools/cut' },
               { text: 'find', link: '/references/cli-tools/find' },
+              { text: 'useradd', link: '/references/cli-tools/useradd' },
+              { text: 'xargs', link: '/references/cli-tools/xargs' },
             ]
           }
         ]
