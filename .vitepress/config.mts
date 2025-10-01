@@ -67,6 +67,14 @@ export default defineConfig({
               { text: 'IaC Overview', link: '/devops/iac/' },
               { text: 'Ansible', link: '/devops/iac/ansible/' },
               { text: 'OpenTofu', link: '/devops/iac/opentofu/' },
+              { 
+                text: 'Terraform',
+                items: [
+                  { text: 'Terraform Overview', link: '/devops/iac/terraform/'},
+                  { text: 'KVM single-node', link: '/devops/iac/terraform/kvm-singlenode'},
+                  { text: 'KVM multi-node', link: '/devops/iac/terraform/kvm-multinode'},
+                ]
+              },
             ]
           },
         ]
