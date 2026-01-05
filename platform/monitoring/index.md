@@ -7,4 +7,8 @@ description: Monitoring infrastructure, logs, and metrics collection.
 
 Resources for setting up and maintaining observability tools.
 
-> Will include tools like Prometheus, Grafana, and custom alerting scripts.
+## Server monitoring using Node_exporter, Prometheus, Grafana
+
+- [Server Monitoring/](./simple-monitoring)
+
+> Will include advanced tools and custom alerting scripts.

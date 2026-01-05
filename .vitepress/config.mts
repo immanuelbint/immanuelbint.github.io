@@ -106,7 +106,13 @@ export default defineConfig({
               }
             ]
           },
-          { text: 'Monitoring', link: '/platform/monitoring/' },
+          { text: 'Monitoring',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/platform/monitoring/' },
+              { text: 'Server Monitoring', link: '/platform/monitoring/simple-monitoring' },
+            ]
+           },
           { text: 'Networking', link: '/platform/networking/' },
           {
             text: 'Security',
@@ -145,6 +151,7 @@ export default defineConfig({
               { text: 'cut', link: '/references/cli-tools/cut' },
               { text: 'find', link: '/references/cli-tools/find' },
               { text: 'firewall-cmd', link: '/references/cli-tools/firewall-cmd' },
+              { text: 'sed', link: '/references/cli-tools/sed'},
               { text: 'useradd', link: '/references/cli-tools/useradd' },
               { text: 'xargs', link: '/references/cli-tools/xargs' },
             ]

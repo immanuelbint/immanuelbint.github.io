@@ -14,9 +14,9 @@ awk '{print $0}' employee.txt
 output:
 ```
 Name Postition Department
-anto manager accounting
-budi manager finance
-cecil manager HR
+Anto manager accounting
+Budi manager finance
+Cecil manager HR
 Dinda assistant marketing
 Eko supervisor IT
 Farah hr_officer HR
@@ -36,9 +36,9 @@ awk '{print $1 "\t" $3}' employee.txt
 output:
 ```
 Name    Department
-anto    accounting
-budi    finance
-cecil   HR
+Anto    accounting
+Budi    finance
+Cecil   HR
 Dinda   marketing
 Eko     IT
 Farah   HR
@@ -56,7 +56,7 @@ awk '/finance/ {print $0}' employee.txt
 ```
 output:
 ```
-budi manager finance
+Budi manager finance
 Gita senior_analyst finance
 ```
 
@@ -79,9 +79,9 @@ before count ( for clarity )
 ```bash
 $ awk '/m/ {print $0}' employee.txt
 Name Postition Department
-anto manager accounting
-budi manager finance
-cecil manager HR
+Anto manager accounting
+Budi manager finance
+Cecil manager HR
 Dinda assistant marketing
 ```
 
@@ -99,7 +99,7 @@ output:
 ```bash
 $ cat output.txt
 Name Postition Department
-anto manager accounting
+Anto manager accounting
 Eko supervisor IT
 Farah hr_officer HR
 Gita senior_analyst finance

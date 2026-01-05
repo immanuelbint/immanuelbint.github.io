@@ -14,6 +14,7 @@ Cheatsheets and examples for commonly used Linux CLI tools.
 - [cut](./cli-tools/cut.md)
 - [find](./cli-tools/find.md)
 - [firewall-cmd](./cli-tools/firewall-cmd.md)
+- [sed](./cli-tools/sed.md)
 - [useradd](./cli-tools/useradd.md)
 - [xargs](./cli-tools/xargs.md)
 
